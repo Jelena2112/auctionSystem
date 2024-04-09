@@ -12,9 +12,11 @@ $auctionModel = new Auction();
 
 <!DOCTYPE HTML>
 
-<html>
+<html lang="en">
 
-    <head></head>
+    <head>
+        <title>Draganov bidding sistem</title>
+    </head>
 
     <body>
         <table>

@@ -35,7 +35,7 @@ $auctionModel = new Auction();
                         <td><?= $auction['owner'] ?></td>
                         <td><?= $auction['latest_bid'] ?></td>
                         <td><?= $auction['won_by'] ?></td>
-                        <td><a href="bid.php">Bid</a></td>
+                        <td><a href="bid.php?auctionId=<?= $auction['id'] ?>">Bid</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

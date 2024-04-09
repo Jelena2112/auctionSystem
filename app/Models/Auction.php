@@ -19,7 +19,7 @@ class Auction extends BaseModel
     public function getAll(): array
     {
         return $this->sql->query("
-            SELECT a.latest_bid, u.email as 'owner', p.name as 'product', uo.email as 'won_by' FROM auction AS a
+            SELECT a.id, a.latest_bid, u.email as 'owner', p.name as 'product', uo.email as 'won_by' FROM auction AS a
                 INNER JOIN users AS u ON u.id = a.owner
                 INNER JOIN products AS p ON p.id = a.product_id
                 LEFT JOIN users AS uo ON uo.id = a.won_by

@@ -6,19 +6,14 @@ use mysqli;
 
 class BaseModel
 {
-    private readonly mysqli $sql;
+    protected readonly mysqli $sql;
     public function __construct()
     {
         $this->sql = mysqli_connect(
-            hostname: $_ENV['hostname'],
-            username: $_ENV['username'],
-            password: $_ENV['password'],
-            database: $_ENV['database'],
+            hostname: $_ENV['DB_HOSTNAME'],
+            username: $_ENV['DB_USER'],
+            password: $_ENV['DB_PASSWORD'],
+            database: $_ENV['DB_DATABASE'],
         );
-    }
-
-    public function getConnection()
-    {
-        return $this->sql;
     }
 }

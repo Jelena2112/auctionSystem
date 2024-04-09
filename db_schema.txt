@@ -1,0 +1,13 @@
+
+
+user
+    id, email, password
+
+products
+    id, name, price, amount
+
+auction
+    id, product_id, owner (user_id), latest_bid, won_by (user_id)
+
+bids
+    id, auction_id, amount, user_id
